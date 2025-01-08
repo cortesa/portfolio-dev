@@ -1,0 +1,38 @@
+---
+import SocialPill from "./SocialPill.astro";
+import Badge from './Badge.astro';
+import LinkedInIcon from '../icons/LinkedIn.astro';
+import GithubIcon from '../icons/Github.astro';
+import MailIcon from '../icons/Mail.astro';
+---
+
+
+  <div class="z-10 ml-5 p-5">
+    <div class="absolute top-0 left-0 w-full h-full bg-white/10 p-4 rounded-3xl z-[-2]"/>
+    <h1 class="text-white text-5xl font-bold flex flex-row items-center gap-x-5 pb-10 pl-20">Hey!, I'm Cortesa <Badge>Open to Work</Badge></h1>
+      <div class="relative ">
+        <div class="absolute top-0 left-[-20px] pl-16 pr-6  w-full h-full bg-black/35 blur-xl z-0"/>
+        <h2 class="relative text-2xl text-wrap pl-16 pr-6 pb-4 z-10 ">With 8 years of experience building websites and apps. I specialize in modern, efficient, and user-friendly solutions while staying updated with the latest technologies.</h2>
+        <h2 class="relative text-2xl text-wrap pl-16 pr-6 pb-4 z-10">I enjoy problem-solving, automating workflows, and collaborating with teams to bring proactive ideas and improvements. Let’s work together to create impactful projects!</h2>
+      </div>
+    </div>
+    <nav class="flex flex-row justify-end gap-x-4 pr-5">
+        <SocialPill href="https://linkedin.com/in/cortesa74">
+          <LinkedInIcon class="size-6"/>
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/cortesa">
+          <GithubIcon class="size-6"/>
+          Github
+        </SocialPill>
+        <SocialPill href="mailto:cortesa@gmail.com">
+          <MailIcon class="size-6"/>
+          cortesa@gmail.com
+        </SocialPill>
+    </nav>
+  </div>
+  
+  <img
+  class="absolute bottom-0 left-[-240px] w-[500px] z-[-1]"
+  src="./cortesa_avatar_cropped.png"
+  />

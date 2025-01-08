@@ -1,0 +1,9 @@
+---
+interface Props {
+  id: string
+  class?:string
+}
+
+const {id, class:className}= Astro.props
+---
+<section id={id} class={`relative w-full lg:w-[740px] mx-auto pb-4 ${className}`}><slot/></section>
