@@ -4,6 +4,8 @@ import Badge from './Badge.astro';
 import LinkedInIcon from '../icons/LinkedIn.astro';
 import GithubIcon from '../icons/Github.astro';
 import MailIcon from '../icons/Mail.astro';
+
+import ContactMe from './Contact.astro'
 ---
 
 
@@ -50,28 +52,7 @@ import MailIcon from '../icons/Mail.astro';
       </h2>
       </div>
     </div>
-    <nav class={`
-    flex 
-    flex-row 
-    flex-wrap
-    justify-center lg:justify-end 
-    gap-x-4 gap-y-2 
-    lg:pr-5
-    pb-9
-    `}>
-        <SocialPill href="https://linkedin.com/in/cortesa74">
-          <LinkedInIcon class="size-6"/>
-          LinkedIn
-        </SocialPill>
-        <SocialPill href="https://github.com/cortesa">
-          <GithubIcon class="size-6"/>
-          Github
-        </SocialPill>
-        <SocialPill href="mailto:cortesa@gmail.com">
-          <MailIcon class="size-6"/>
-          cortesa@gmail.com
-        </SocialPill>
-    </nav>
+    <ContactMe class="pb-9"/>
   <img
   class={`
     absolute

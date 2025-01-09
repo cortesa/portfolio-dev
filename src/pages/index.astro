@@ -3,9 +3,9 @@ import CortesaHero from '../components/CortesaHero.astro';
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import TechStack from '../components/TechStack.astro';
-import BriefcaseIcon from '../icons/Briefcase.astro';
-import CodeIcon from '../icons/Code.astro';
 import Layout from '../layouts/Layout.astro';
+import ContactMe from '../components/Contact.astro';
+import ChatIcon from '../icons/Chat.astro';
 ---
 
 <Layout
@@ -25,8 +25,15 @@ description="Explore the portfolio of Cortesa, a React web developer with 8 year
 		<h2 class="text-2xl semi-bold mb-6 flex gap-x-3 items-center">
 			<CodeIcon class="size-8"/>
 			Projects
-		</h2>
-	</SectionContainer> -->
+			</h2>
+			</SectionContainer> -->
+			<SectionContainer id="contact" >
+				<h2 class="text-2xl semi-bold mb-6 flex gap-x-3 items-center">
+			<ChatIcon class="size-8"/>
+			Let's talk?
+			</h2>
+				<ContactMe class="pb-9"/>
+			</SectionContainer>
 	</main>
 </Layout>
 
