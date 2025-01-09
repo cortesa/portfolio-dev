@@ -2,6 +2,7 @@
 import CortesaHero from '../components/CortesaHero.astro';
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
+import TechStack from '../components/TechStack.astro';
 import BriefcaseIcon from '../icons/Briefcase.astro';
 import CodeIcon from '../icons/Code.astro';
 import Layout from '../layouts/Layout.astro';
@@ -14,11 +15,10 @@ description="Explore the portfolio of Cortesa, a React web developer with 8 year
 		<SectionContainer id="hero" class="mt-20 lg:mt-36 mb-16">
 			<CortesaHero/>
 		</SectionContainer>
+	<SectionContainer id="tech-stack" class=" mb-16" >
+		<TechStack/>
+	</SectionContainer>
 	<SectionContainer id="experience" >
-		<h2 class="text-2xl semi-bold mb-6 flex gap-x-3 items-center">
-			<BriefcaseIcon class="size-8"/>
-			Work experience
-		</h2>
 		<Experience/>
 	</SectionContainer>
 	<!-- <SectionContainer id="projects" >

@@ -1,0 +1,34 @@
+---
+import type { Tech } from '../const/techs'
+
+interface Props {
+  tech: Tech
+}
+
+const {tech} = Astro.props
+
+const dynamicBorder={
+  borderColor: tech.color,
+}
+
+const dynamicTextColor={
+  color: tech.color
+}
+
+---
+
+<div class={`
+flex
+gap-x-2 
+px-4 
+py-2 
+rounded-full 
+items-center 
+border 
+cursor-default
+`}
+style={dynamicBorder}
+>
+  <tech.icon class="size-6"/>
+  <span style={dynamicTextColor}>{tech.name}</span>
+</div>

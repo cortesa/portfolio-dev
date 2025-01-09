@@ -1,0 +1,46 @@
+---
+import StackIcon  from '../icons/Stack.astro';
+import TechPill from './TechPill.astro';
+import {TECHS} from '../const/techs';
+
+const {REACT,
+TYPESCRIPT,
+ATOM,
+CSS,
+HTML,
+NODE,
+EXPRESS,
+GIT,
+GITHUB,
+BLOCKCHAIN,
+ASTRO,
+TAILWIND,
+NEXT} = TECHS
+
+const TECH_STACK = [
+  REACT,
+  TYPESCRIPT,
+  ATOM,
+  CSS,
+  HTML,
+  NODE,
+  EXPRESS,
+  GIT,
+  GITHUB,
+  BLOCKCHAIN,
+  ASTRO,
+  TAILWIND,
+  // NEXT
+]
+
+
+---
+<h2 class="text-2xl semi-bold mb-6 flex gap-x-3 items-center">
+			<StackIcon class="size-8"/>
+			Tech stack
+		</h2>
+		<div class="flex flex-row flex-wrap gap-4 pl-10">
+      {TECH_STACK.map(tech => (
+        <TechPill tech={tech}/>
+      ))}
+    </div>
