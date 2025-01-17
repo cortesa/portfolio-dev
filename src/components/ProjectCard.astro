@@ -1,0 +1,28 @@
+---
+import { TECHS, type Tech } from "../const/techs"
+import TechPill from "./TechPill.astro"
+
+const {project}=Astro.props
+---
+<a 
+href={project.url}
+target="_blank"
+rel="noopener noreferrer"
+class="grid grid-row grid-cols-[0.33fr_1fr] items-center gap-4 rounded-3xl overflow-hidden bg-slate-100/10 hover:scale-105 transition-all hover:shadow-yellow-200">
+          <div
+          class={`w-full h-full`}
+          style={{
+    backgroundImage: `url(${project.image})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  }}
+          >
+
+          </div>
+          <div class="flex flex-col p-2 pb-3">
+            <h3 class="text-xl text-bold text-yellow-200">{project.name}</h3>
+            <p class="text-sm text-pretty">{project.description}</p>
+            <div class="flex flex-row gap-2 pt-2">{project.techs.map((tech: Tech)=><TechPill tech={TECHS[tech]}/>)}</div>
+  
+          </div>
+        </a>

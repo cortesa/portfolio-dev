@@ -1,37 +1,9 @@
 ---
+import { TECHS } from '../const/techs';
+import { TECH_STACK } from '../contents/techStack';
 import StackIcon  from '../icons/Stack.astro';
 import TechPill from './TechPill.astro';
-import {TECHS} from '../const/techs';
 
-const {REACT,
-TYPESCRIPT,
-ATOM,
-CSS,
-HTML,
-NODE,
-EXPRESS,
-GIT,
-GITHUB,
-BLOCKCHAIN,
-ASTRO,
-TAILWIND,
-NEXT} = TECHS
-
-const TECH_STACK = [
-  REACT,
-  TYPESCRIPT,
-  ATOM,
-  CSS,
-  HTML,
-  NODE,
-  EXPRESS,
-  GIT,
-  GITHUB,
-  BLOCKCHAIN,
-  ASTRO,
-  TAILWIND,
-  // NEXT
-]
 
 
 ---
@@ -40,7 +12,7 @@ const TECH_STACK = [
 			Tech stack
 		</h2>
 		<div class="flex flex-row flex-wrap gap-4 pl-10">
-      {TECH_STACK.map(tech => (
-        <TechPill tech={tech}/>
+      {TECH_STACK.map(techId => (
+        <TechPill tech={TECHS[techId]}/>
       ))}
     </div>

@@ -7,6 +7,7 @@ import Layout from '../layouts/Layout.astro';
 import ContactMe from '../components/Contact.astro';
 import ChatIcon from '../icons/Chat.astro';
 import Footer from '../components/Footer.astro';
+import Lab from '../components/Lab.astro';
 ---
 
 <Layout
@@ -16,10 +17,13 @@ description="Meet Cortesa, a React web developer with 8 years of experience. Spe
 		<SectionContainer id="hero" class="mt-20 lg:mt-36 mb-16">
 			<CortesaHero/>
 		</SectionContainer>
-	<SectionContainer id="tech-stack" class=" mb-16" >
+	<SectionContainer id="tech-stack" class="mb-16" >
 		<TechStack/>
 	</SectionContainer>
-	<SectionContainer id="experience" class=" mb-16">
+	<SectionContainer id="lab" class="mb-16">
+		<Lab/>
+	</SectionContainer>
+	<SectionContainer id="experience" class="mb-16">
 		<Experience/>
 	</SectionContainer>
 	<!-- <SectionContainer id="projects" >
@@ -28,7 +32,7 @@ description="Meet Cortesa, a React web developer with 8 years of experience. Spe
 			Projects
 			</h2>
 			</SectionContainer> -->
-			<SectionContainer id="contact" class=" mb-16">
+			<SectionContainer id="contact" class="mb-16">
 				<h2 class="text-2xl semi-bold mb-6 flex gap-x-3 items-center">
 			<ChatIcon class="size-8"/>
 			Let's talk?

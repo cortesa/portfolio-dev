@@ -12,6 +12,7 @@ import ChainIcon from '../icons/Chain.astro'
 import TailwindcssIcon from '../icons/Tailwindcss.astro'
 import AstroIcon from '../icons/Astro.astro'
 import NextIcon from '../icons/Next.astro'
+import DndKitIcon from '../icons/DndKit.astro'
 
 export type Tech = {
   name: string
@@ -19,7 +20,7 @@ export type Tech = {
   icon: AstroComponentFactory
 }
 
-export const TECHS: Record<string, Tech> = {
+export const TECHS = {
   REACT: {
     name: 'React',
     color: '#61DAFB',
@@ -84,5 +85,10 @@ export const TECHS: Record<string, Tech> = {
     name: 'Next.js',
     color: '#FFFFFFcc',
     icon: NextIcon,
+  },
+  DNDKIT: {
+    name: 'Dnd kit',
+    color: '#FFFFFFcc',
+    icon: DndKitIcon,
   },
 }
