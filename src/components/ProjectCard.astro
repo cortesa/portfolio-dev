@@ -8,21 +8,43 @@ const {project}=Astro.props
 href={project.url}
 target="_blank"
 rel="noopener noreferrer"
-class="grid grid-row grid-cols-[0.33fr_1fr] items-center gap-4 rounded-3xl overflow-hidden bg-slate-100/10 hover:scale-105 transition-all hover:shadow-yellow-200">
-          <div
-          class={`w-full h-full`}
-          style={{
-    backgroundImage: `url(${project.image})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  }}
-          >
+class={`
+  grid
+  grid-col md:grid-row
+  grid-rows-[1fr_1fr] md:grid-rows-none md:grid-cols-[0.33fr_1fr] 
+  items-center 
+  gap-0 md:gap-4 
+  rounded-3xl 
+  overflow-hidden 
+  bg-slate-100/10 
+  transition-all 
+  hover:scale-105 
+  hover:shadow-yellow-200
+  pb-1
+`}>
+<div 
+  class={`
+    w-full h-full
+    flex
+    flex-row
+    items-center
+  `}
+>
+  <div
+    class={`w-1/2 md:w-full h-full`}
+    style={{
+      backgroundImage: `url(${project.image})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}
+  />
+      <div class="md:hidden scale-90 flex flex-row justify-center flex-wrap gap-2 pt-2">{project.techs.map((tech: (keyof typeof TECHS))=><TechPill tech={TECHS[tech]}/>)}</div>   
 
-          </div>
-          <div class="flex flex-col p-2 pb-3">
-            <h3 class="text-xl text-bold text-yellow-200">{project.name}</h3>
-            <p class="text-sm text-pretty">{project.description}</p>
-            <div class="flex flex-row gap-2 pt-2">{project.techs.map((tech: Tech)=><TechPill tech={TECHS[tech]}/>)}</div>
-  
-          </div>
-        </a>
+  </div>
+    <div class="flex flex-col p-4 md:p-2 pb-3">
+      <h3 class="text-xl text-bold text-yellow-200">{project.name}</h3>
+      <p class="text-sm text-pretty">{project.description}</p>
+      <div class="hidden md:flex flex-row flex-wrap gap-2 pt-2 scale-90">{project.techs.map((tech: (keyof typeof TECHS))=><TechPill tech={TECHS[tech]}/>)}</div>   
+    </div>
+  </div>
+</a>

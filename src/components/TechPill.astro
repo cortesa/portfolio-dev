@@ -20,6 +20,7 @@ const dynamicTextColor={
 <div class={`
 w-fit
 flex
+flex-nowrap
 gap-x-2 
 px-4 
 py-2 
@@ -27,9 +28,10 @@ rounded-full
 items-center 
 border 
 cursor-default
+
 `}
 style={dynamicBorder}
 >
   <tech.icon class="size-6"/>
-  <span style={dynamicTextColor}>{tech.name}</span>
+  <span class="whitespace-nowrap" style={dynamicTextColor}>{tech.name}</span>
 </div>
