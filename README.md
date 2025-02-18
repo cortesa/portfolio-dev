@@ -1,2 +1,2 @@
 # Cortesa Portfolio page
-This repo uses PNPM
+This repo uses YARN
