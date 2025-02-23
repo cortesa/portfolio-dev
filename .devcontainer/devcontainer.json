@@ -11,6 +11,7 @@
 				"astro-build.astro-vscode"
 			],
 			"settings": {
+				"workbench.editor.tabCloseButton": "left",
 				"editor.defaultFormatter": "dbaeumer.vscode-eslint",
 				"editor.codeActionsOnSave": {
 					"source.fixAll.eslint": "always"
