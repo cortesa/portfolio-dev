@@ -3,6 +3,10 @@
 {
 	"name": "Cortesa_About_Page",
 	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+	"runArgs": [
+		"--name=cortesa_about_page",
+		"--rm"
+	],
 	"customizations": {
 		"vscode": {
 			"extensions": [
