@@ -1,0 +1,19 @@
+---
+import PortfolioIcon from '@/icons/PortfolioIcon.astro'
+import {PORTFOLIO} from '@/contents/portfolio'
+import { PortfolioCardIsland } from './islands/PortfolioCard'
+---
+
+<h2 class="text-2xl semi-bold mb-6 flex gap-x-3 items-center">
+			<PortfolioIcon class="size-8"/>
+			Portfolio
+		</h2>
+		<div class="relative grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] min-w-[600px] gap-4">
+      {PORTFOLIO.map((project) => (
+        <PortfolioCardIsland client:idle project={project} />
+      ))}
+
+      {Array.from({ length: (3 - (PORTFOLIO.length % 3)) % 3 }).map(() => (
+        <div />
+      ))}
+    </div>

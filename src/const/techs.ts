@@ -13,6 +13,7 @@ import TailwindcssIcon from '../icons/Tailwindcss.astro'
 import AstroIcon from '../icons/Astro.astro'
 import NextIcon from '../icons/Next.astro'
 import DndKitIcon from '../icons/DndKit.astro'
+import Lit from '../icons/Lit.astro'
 
 export type Tech = {
   name: string
@@ -91,4 +92,9 @@ export const TECHS = {
     color: '#FFFFFFcc',
     icon: DndKitIcon,
   },
+  LIT_ELEMENTS: {
+    name: 'Lit Element',
+    color: '#3455FF',
+    icon: Lit
+  }
 }

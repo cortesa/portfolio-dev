@@ -8,7 +8,7 @@ export type Project = {
   techs: (keyof typeof TECHS)[]
 }
 
-export const PROJECTS: Project[] = [
+export const LAB_PROJECTS: Project[] = [
   {
     name: 'Kanban',
     image: '/images/labKanbanPreview.webp',
