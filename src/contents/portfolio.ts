@@ -4,6 +4,7 @@ export type PortfolioProject = {
   name: string
   companyName: string
   image: string
+  color: string
   url: string
   description: string
   techs: (keyof typeof TECHS)[]
@@ -13,10 +14,11 @@ export const PORTFOLIO: PortfolioProject[] = [
   {
     name: 'Yolorekt',
     companyName:"Yolorekt",
-    image: '/images/labKanbanPreview.webp',
-    url: 'https://kanban.lab.cortesa.net',
+    image: '/images/projectCovers/Yolorekt.png',
+    color: "#f97316",
+    url: 'https://yolorekt.com',
     description:
-    'Kanban is an online tool for managing projects and tasks using the Kanban method (not production ready). Developed by cortesa.net, it offers an intuitive interface and advanced features to improve productivity and organization.Kanban is an online tool for managing projects and tasks using the Kanban method (not production ready).',
-    techs: ['REACT', 'DNDKIT', 'TAILWIND', 'LIT_ELEMENTS', 'ATOM'],
+      'YOLOrekt is building a comprehensive short-term prediction platform for crypto, stocks, and more. YOLO is a social and fun way to bid on the future price of an asset. Provide in-game liquidity to earn game fees and YOLO rewards.',
+    techs: ['REACT', 'SOCKET_IO', 'ATOM', ],
   },
 ]

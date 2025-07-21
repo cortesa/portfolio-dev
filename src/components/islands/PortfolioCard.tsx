@@ -1,25 +1,30 @@
 import { TECHS } from "@/const/techs"
 import type { PortfolioProject } from "@/contents/portfolio"
-import { useState } from "react"
+import { useState, type ReactElement } from "react"
 import TechPill from "../TechPill.astro"
 
 type PortfolioProps={
   project: PortfolioProject
+  children: ReactElement
 }
 
-export function PortfolioCardIsland ({project}:PortfolioProps) {
+export function PortfolioCardIsland ({project, children}:PortfolioProps) {
   const [expand, setExpand] = useState(false)
 
   return (
-      <div 
+      <a 
+        href={project.url}
+        target="_blank"
+        rel="noopener noreferrer"
         className={`
+          cursor-pointer
           relative
           flex 
           flex-col 
           p-4
           bg-[rgba(36,36,36,1)]
           rounded-3xl
-          h-80
+          h-[314px]
           `}
           onMouseEnter={() => setExpand(true)}
           onMouseLeave={() => setExpand(false)}>
@@ -38,10 +43,16 @@ export function PortfolioCardIsland ({project}:PortfolioProps) {
 		          duration-500
 		          ease-in-out
               ${expand 
-                ? "gap-0 w-[400px]            h-[400px] translate-x-[-24%] translate-y-[-10%] z-50"
-                : "gap-2 w-[calc(100%_-_32px)] h-[290px] translate-x-[0%]   translate-y-[0%]   z-0 "
+                ? "gap-0 w-[400px]             h-[125%]              translate-x-[-24%] translate-y-[-20%] pb-3 z-50"
+                : "gap-2 w-[calc(100%_-_32px)] h-[calc(100%_-_32px)] translate-x-[0%]   translate-y-[0%]   z-0 "
               }
-            `}>
+            `}
+            style={{
+              "--shadow-color": project.color,
+              boxShadow: `0px 0px 0px 0px ${project.color}`,
+              animation: expand?`pulse-shadow 1.5s infinite`:'',
+            }}
+            >
             <div
               className={`h-[150px] min-h-[150px] w-full`}
                 style={{
@@ -87,12 +98,12 @@ export function PortfolioCardIsland ({project}:PortfolioProps) {
               ${expand
                 ? "before:opacity-0"
                 : "before:opacity-100"}
-                before:transition-opacity
+                before:transition-opacity0
                 before:duration-500
                 before:ease-in-out  
-            `}>
-            {project.description}
-          </p>
+              `}>
+              {project.description}
+            </p>
         <div className={`
           flex 
           flex-row 
@@ -100,27 +111,15 @@ export function PortfolioCardIsland ({project}:PortfolioProps) {
           overflow-hidden 
           whitespace-nowrap
           gap-2 
-          pt-2
-          pb-3
-          h-content 
           transition-all
 		      duration-500
 		      ease-in-out
-          ${expand ? "p-4":"p-0"}
-          ${expand ? "scale-100":"scale-75 translate-x-[-12%]"}
-          
-          `}>
-          {project.techs.map((tech: (keyof typeof TECHS)) => (
-            <div
-              className="flex items-center gap-1 px-2 py-2 rounded-full text-[12px] font-medium"
-              style={{ border: `1px solid ${TECHS[tech].color}` }}
-              key={tech}
-            >
-              <span style={{ color: TECHS[tech].color}}>{TECHS[tech].name}</span>
-            </div>
-          ))}
+          ${expand ? "h-[40px]":"h-[120px]"}
+              ${expand ? "pl-4 mt-0":"pl-0 mt-0"}
+
+`}>          {children}
         </div>
       </div>
-    </div>
+    </a>
   )
 }

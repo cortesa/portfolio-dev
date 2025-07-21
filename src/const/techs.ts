@@ -14,6 +14,7 @@ import AstroIcon from '../icons/Astro.astro'
 import NextIcon from '../icons/Next.astro'
 import DndKitIcon from '../icons/DndKit.astro'
 import Lit from '../icons/Lit.astro'
+import SocketIo from '../icons/SocketIo.astro'
 
 export type Tech = {
   name: string
@@ -96,5 +97,10 @@ export const TECHS = {
     name: 'Lit Element',
     color: '#3455FF',
     icon: Lit
+  },
+  SOCKET_IO: {
+    name: 'Socket.IO',
+    color: '#FFFFFF',
+    icon: SocketIo
   }
 }
