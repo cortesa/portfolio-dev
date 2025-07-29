@@ -103,4 +103,66 @@ export const TECHS = {
     color: '#FFFFFF',
     icon: SocketIo
   }
+
+  // ─── Auto-evaluated from experience ────────────────────────────────
+  // STYLED_COMPONENTS: {
+  //   name: 'Styled Components',
+  //   color: '#DB7093',
+  //   icon: CssIcon,
+  // },
+  // AXIOS: {
+  //   name: 'Axios',
+  //   color: '#5A29E4',
+  //   icon: CssIcon,
+  // },
+  // SOCKET_IO: {
+  //   name: 'Socket.io',
+  //   color: '#010101',
+  //   icon: NodeIcon,
+  // },
+  // REACT_QUERY: {
+  //   name: 'React Query',
+  //   color: '#FF4154',
+  //   icon: ReactIcon,
+  // },
+  // JEST: {
+  //   name: 'Jest',
+  //   color: '#C63D14',
+  //   icon: HtmlIcon,
+  // },
+  // VITEST: {
+  //   name: 'Vitest',
+  //   color: '#6E9F18',
+  //   icon: TypescriptIcon,
+  // },
+  // REACT_TESTING_LIBRARY: {
+  //   name: 'React Testing Library',
+  //   color: '#E83225',
+  //   icon: ReactIcon,
+  // },
+  // CYPRESS: {
+  //   name: 'Cypress',
+  //   color: '#2E495E',
+  //   icon: HtmlIcon,
+  // },
+  // WAGMI: {
+  //   name: 'Wagmi',
+  //   color: '#FFC107',
+  //   icon: ChainIcon,
+  // },
+  // VIEM: {
+  //   name: 'Viem',
+  //   color: '#845EF7',
+  //   icon: ChainIcon,
+  // },
+  // JENKINS: {
+  //   name: 'Jenkins',
+  //   color: '#D24939',
+  //   icon: HtmlIcon,
+  // },
+  // TERRAFORM: {
+  //   name: 'Terraform',
+  //   color: '#623CE4',
+  //   icon: HtmlIcon,
+  // }
 }
