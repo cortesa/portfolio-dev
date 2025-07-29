@@ -12,7 +12,7 @@ import TechPill from './TechPill.astro';
 			Tech stack
 		</h2>
 		<div class="flex flex-row flex-wrap gap-4">
-      {TECH_STACK.map(techId => (
-        <TechPill tech={TECHS[techId]}/>
+      {TECH_STACK.map(tech => (
+        <TechPill tech={TECHS[tech.name]}/>
       ))}
     </div>
