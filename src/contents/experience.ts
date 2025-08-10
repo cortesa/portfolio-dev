@@ -9,7 +9,7 @@ type ExperienceItem = {
 export const EXPERIENCE = [
   {
     date: 'Feb 2025 - Jul 2025',
-    title: 'Senior Frontend Developer & web3 at NumberGroup',
+    title: 'Frontend Developer & web3 at NumberGroup',
     description: 'As a Frontend Developer at NumberGroup, I´ve been collaborating to add new features and port to v2.',
 		bullets: [
 			'Developed and maintained UI using React.js (v18), TypeScript (v5.3.2), and Styled-Components (v6.1.1).',
@@ -23,7 +23,7 @@ export const EXPERIENCE = [
   },
   {
     date: 'May 2021 - Dec 2024',
-    title: 'Senior Frontend Developer at YoloRekt',
+    title: 'Frontend Engineer at YoloRekt',
     description: 'As a Frontend Developer at YoloReck, I over see the complete development workflow-from implementing Ul designs to deploying applications using AWS Amplify.',
 		bullets: [
 			'Led the development of UI using React.js (v18), TypeScript v(5.3) and CSS module.',
@@ -37,7 +37,7 @@ export const EXPERIENCE = [
   },
   {
     date: 'Nov 2019 - Nov 2021',
-    title: 'Senior Frontend Developer at SpankChain',
+    title: 'Frontend Developer at SpankChain',
     description: 'I was part of a frontend development team, handling tasks such as component modifications, implementing new business logic, and fixing bugs, all within an agile environment.',
 		bullets: [
       'Developed and maintained UI using React.js (v16.13), TypeScript (v3.8) and Styled-components (v5.2.1).',
@@ -50,7 +50,7 @@ export const EXPERIENCE = [
   },
   {
     date: 'Mar 2018 - Nov 2019',
-    title: 'Senior Fullstack web developer at Syscoin (Blockchain Foundry)',
+    title: 'Fullstack web developer at Syscoin (Blockchain Foundry)',
     description: 'I was part of the founding development team, where I built the landing page, contributed to an Angular-based marketplace, designed the wallet interface, and automated blockchain node deployment.',
 		bullets: [
 			'Developed and maintained the landing page using React.js (v16.8) and CSS.',
@@ -64,7 +64,7 @@ export const EXPERIENCE = [
   },
   {
     date: 'Jul 2017 - Feb 2018',
-    title: 'Senior Frontend developer at Thrifa',
+    title: 'Frontend developer at Thrifa',
     description: 'I lead the development team responsible for building web applications centered on blockchain technology and cryptocurrencies. Our tech stack includes React.js and Angular for the Ul, with CSS and Styled-components for',
 		bullets: [
 			'Led the development of web applications using React.js (v15.6) and Angular (v5.x).',
