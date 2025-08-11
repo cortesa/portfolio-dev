@@ -1,19 +1,20 @@
 ---
 import PortfolioIcon from '@/icons/PortfolioIcon.astro'
 import {PORTFOLIO} from '@/contents/portfolio'
-import { PortfolioCardIsland } from './islands/PortfolioCard'
-import { TECHS } from '@/const/techs'
+import { TECHS, type Tech } from '@/const/techs'
 import TechPill from './TechPill.astro'
+
+import { PortfolioCardIsland } from '@/components/islands/PortfolioCard'
 ---
 
 <h2 class="text-2xl semi-bold mb-6 flex gap-x-3 items-center">
 			<PortfolioIcon class="size-8"/>
 			Portfolio
 		</h2>
-		<div class="relative grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] min-w-[600px] gap-4">
+		<div class="relative grid grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] min-w-[350px] gap-4">
       {PORTFOLIO.map((project) => (
         <PortfolioCardIsland client:idle project={project} >
-          {project.techs.map((tech: (keyof typeof TECHS))=><TechPill tech={TECHS[tech]}/>)}
+          {project.techs.map((tech: Tech)=><TechPill tech={TECHS[tech]}/>)}
         </PortfolioCardIsland>
       ))}
 

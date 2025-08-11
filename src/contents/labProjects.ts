@@ -23,6 +23,6 @@ export const LAB_PROJECTS: Project[] = [
     url: 'https://weather.lab.cortesa.net',
     description:
       'Weather is a web application that fetches real-time weather data using the wttr.in API. Users can search for a city to view current conditions and upcoming forecasts in a clean and intuitive interface.',
-    techs: ['REACT', 'TAILWIND', 'ATOM'],
+    techs: ['REACT', 'TAILWIND', 'JOTAI'],
   },
 ]

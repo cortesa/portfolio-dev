@@ -1,7 +1,9 @@
 import { TECHS } from "@/const/techs"
 import type { PortfolioProject } from "@/contents/portfolio"
-import { useState, type ReactElement } from "react"
-import TechPill from "../TechPill.astro"
+import { useState, type ReactElement, Children } from "react"
+
+import style from "./portfolioCard.module.css"
+import clsx from "clsx"
 
 type PortfolioProps={
   project: PortfolioProject
@@ -10,57 +12,36 @@ type PortfolioProps={
 
 export function PortfolioCardIsland ({project, children}:PortfolioProps) {
   const [expand, setExpand] = useState(false)
+  const hasManyTechs = project.techs.length > 2;
 
   return (
       <a 
         href={project.url}
         target="_blank"
         rel="noopener noreferrer"
-        className={`
-          cursor-pointer
-          relative
-          flex 
-          flex-col 
-          p-4
-          bg-[rgba(36,36,36,1)]
-          rounded-3xl
-          h-[314px]
-          `}
+        className={style.container}
           onMouseEnter={() => setExpand(true)}
           onMouseLeave={() => setExpand(false)}>
           <div 
-            className={`
-              absolute
-              h-full
-              flex
-              flex-col
-              rounded-xl
-              justify-start
-              items-start
-              bg-[rgba(36,36,36,1)]
-              overflow-hidden
-              transition-all
-		          duration-500
-		          ease-in-out
-              ${expand 
-                ? "gap-0 w-[400px]             h-[125%]              translate-x-[-24%] translate-y-[-20%] pb-3 z-50"
-                : "gap-2 w-[calc(100%_-_32px)] h-[calc(100%_-_32px)] translate-x-[0%]   translate-y-[0%]   z-0 "
-              }
-            `}
+            className={clsx(
+              style.content,
+              expand && style.expanded
+            )}
             style={{
               "--shadow-color": project.color,
-              boxShadow: `0px 0px 0px 0px ${project.color}`,
-              animation: expand?`pulse-shadow 1.5s infinite`:'',
             }}
             >
-            <div
-              className={`h-[150px] min-h-[150px] w-full`}
-                style={{
-                backgroundImage: `url(${project.image})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'top center',
-              }}
-            />
+              <div className={style.imageContainer}>
+                {project.status==="in-progress" && <div className={style.imageOverlay} style={{backgroundColor: project.color}} >IN PROGRESS</div>}
+                <div
+                  className={`h-[150px] min-h-[150px] w-full`}
+                    style={{
+                    backgroundImage: `url(${project.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'top center',
+                  }}
+                />
+              </div>
             <div className="flex flex-col items-center w-full gap-2">
               <div className={`
                 w-full 
@@ -104,21 +85,42 @@ export function PortfolioCardIsland ({project, children}:PortfolioProps) {
               `}>
               {project.description}
             </p>
-        <div className={`
-          flex 
-          flex-row 
-          flex-nowrap
-          overflow-hidden 
-          whitespace-nowrap
-          gap-2 
-          transition-all
-		      duration-500
-		      ease-in-out
-          ${expand ? "h-[40px]":"h-[120px]"}
-              ${expand ? "pl-4 mt-0":"pl-0 mt-0"}
-
-`}>          {children}
-        </div>
+        {expand && hasManyTechs ? (
+          <div className={`
+            flex 
+            flex-row 
+            flex-nowrap
+            overflow-hidden 
+            whitespace-nowrap
+            gap-2 
+            transition-all
+		        duration-500
+		        ease-in-out
+            ${expand ? "h-[50px]":"h-[120px]"}
+            ${expand ? "pl-4 mt-0":"pl-0 mt-0"}`}>
+              <div className={style.scrollContainerº}>
+                <div className={`${style.scrollMarquee} gap-2`}>
+                  {children}
+                  {children}
+                </div>
+              </div>
+          </div>
+        ) : (
+          <div className={`
+            flex 
+            flex-row 
+            flex-nowrap
+            overflow-hidden 
+            whitespace-nowrap
+            gap-2 
+            transition-all
+		        duration-500
+		        ease-in-out
+            ${expand ? "h-[40px]":"h-[120px]"}
+            ${expand ? "pl-4 mt-0":"pl-0 mt-0"}`}>
+            {children}
+          </div>
+        )}
       </div>
     </a>
   )
