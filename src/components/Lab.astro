@@ -1,16 +1,16 @@
 ---
+import { LAB_PROJECTS } from '../contents/labProjects';
 import Flask from '../icons/Flask.astro';
-import {PROJECTS} from '../contents/projects'
-import ProjectCard from './ProjectCard.astro';
+import LabProjectCard from './LabProjectCard.astro';
 ---
 
 <h2 class="text-2xl semi-bold mb-6 flex gap-x-3 items-center">
 			<Flask class="size-8"/>
 			Lab
 		</h2>
-		<div class="flex flex-col gap-8">
-      {PROJECTS.map((project)=>(
-       <ProjectCard project={project} />
+		<div class="grid flex-col gap-8">
+      {LAB_PROJECTS.map((project)=>(
+       <LabProjectCard project={project} />
       ))
     }
     </div>

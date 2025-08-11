@@ -8,10 +8,10 @@ export type Project = {
   techs: (keyof typeof TECHS)[]
 }
 
-export const PROJECTS: Project[] = [
+export const LAB_PROJECTS: Project[] = [
   {
     name: 'Kanban',
-    image: '/images/labKanbanPreview.webp',
+    image: '/images/projectCovers/Kanban.webp',
     url: 'https://kanban.lab.cortesa.net',
     description:
       'Kanban is an online tool for managing projects and tasks using the Kanban method (not production ready). Developed by cortesa.net, it offers an intuitive interface and advanced features to improve productivity and organization.',
@@ -19,10 +19,10 @@ export const PROJECTS: Project[] = [
   },
   {
     name: 'Weather',
-    image: '/images/labWeatherPreview.webp',
+    image: '/images/projectCovers/Weather.webp',
     url: 'https://weather.lab.cortesa.net',
     description:
       'Weather is a web application that fetches real-time weather data using the wttr.in API. Users can search for a city to view current conditions and upcoming forecasts in a clean and intuitive interface.',
-    techs: ['REACT', 'TAILWIND', 'ATOM'],
+    techs: ['REACT', 'TAILWIND', 'JOTAI'],
   },
 ]

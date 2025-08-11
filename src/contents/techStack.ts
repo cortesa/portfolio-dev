@@ -8,7 +8,7 @@ type TechStackItem = {
 export const TECH_STACK: TechStackItem[] = [
   { name: 'REACT', score: 5 },
   { name: 'TYPESCRIPT', score: 5 },
-  { name: 'ATOM', score: 4 },
+  { name: 'JOTAI', score: 4 },
   { name: 'CSS', score: 5 },
   { name: 'HTML', score: 4 },
   { name: 'NODE', score: 3 },

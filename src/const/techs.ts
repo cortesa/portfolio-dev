@@ -13,6 +13,10 @@ import TailwindcssIcon from '../icons/Tailwindcss.astro'
 import AstroIcon from '../icons/Astro.astro'
 import NextIcon from '../icons/Next.astro'
 import DndKitIcon from '../icons/DndKit.astro'
+import ReactQueryIcon from '../icons/ReactQuery.astro'
+import ZustandIcon from '../icons/Zustand.astro'
+import Lit from '../icons/Lit.astro'
+import SocketIo from '../icons/SocketIo.astro'
 
 export type Tech = {
   name: string
@@ -31,8 +35,8 @@ export const TECHS = {
     color: '#3178C6',
     icon: TypescriptIcon,
   },
-  ATOM: {
-    name: 'Atom',
+  JOTAI: {
+    name: 'Jotai',
     color: '#66595C',
     icon: AtomJotaiIcon,
   },
@@ -91,6 +95,26 @@ export const TECHS = {
     color: '#FFFFFFcc',
     icon: DndKitIcon,
   },
+  LIT_ELEMENTS: {
+    name: 'Lit Element',
+    color: '#3455FF',
+    icon: Lit
+  },
+  SOCKET_IO: {
+    name: 'Socket.IO',
+    color: '#FFFFFF',
+    icon: SocketIo
+  },
+  REACT_QUERY: {
+    name: 'React Query',
+    color: '#FF4154',
+    icon: ReactQueryIcon,
+  },
+  ZUSTAND: {
+    name: 'Zustand',
+    color: '#B5651D',
+    icon: ZustandIcon,
+  },
 
   // ─── Auto-evaluated from experience ────────────────────────────────
   // STYLED_COMPONENTS: {
@@ -107,11 +131,6 @@ export const TECHS = {
   //   name: 'Socket.io',
   //   color: '#010101',
   //   icon: NodeIcon,
-  // },
-  // REACT_QUERY: {
-  //   name: 'React Query',
-  //   color: '#FF4154',
-  //   icon: ReactIcon,
   // },
   // JEST: {
   //   name: 'Jest',
