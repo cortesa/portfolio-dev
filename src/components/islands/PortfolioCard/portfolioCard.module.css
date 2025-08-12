@@ -36,6 +36,7 @@
 	padding-bottom: 0.75rem;
 	z-index: 50;
 	animation: portfolioCard-pulse-shadow 1.5s infinite;
+	animation-delay: 0.5s;
 }
 
 @media (width < 675px) {
