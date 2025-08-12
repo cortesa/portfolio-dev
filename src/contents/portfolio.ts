@@ -19,7 +19,7 @@ export const PORTFOLIO: PortfolioProject[] = [
     color: "#f97316",
     url: 'https://yolorekt.com',
     description:
-      'Developed YOLOrekt’s real-time prediction platform UI with React, TypeScript, Jotai, and Socket.io, ensuring responsive and tested interfaces. Deployed via AWS Amplify in collaboration with designers and cross-functional teams.',
+      'I have developed YOLOrekt’s real-time prediction platform UI with React, TypeScript, Jotai, and Socket.io, ensuring responsive and tested interfaces. Deployed via AWS Amplify in collaboration with designers and cross-functional teams.',
     techs: ['REACT', 'SOCKET_IO', 'JOTAI'],
   },
   {
