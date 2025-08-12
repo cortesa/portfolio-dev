@@ -1,21 +1,97 @@
-<header class={`
-flex
-justify-center 
-w-fit
-mx-auto
-mt-3 
-pl-2 
-pr-6 
-py-2 
-rounded-3xl  
-bg-white/5
-`}>
-  <nav class="flex gap-x-5 opacity-80 items-center text-white">
-  <img class="rounded-full w-8 h-8" src="./favicon.svg" alt="cortesa photo" />
-  <a href="#tech-stack">Tech stack</a>
-  <a href="#portfolio">Portfolio</a>
-  <a href="#lab">Lab</a>
-  <a href="#experience">Experience</a>
-  <a href="#contact">Contact</a>
-</nav>
+<header id="main-header"
+  class={`
+    flex justify-center w-fit mx-auto mt-3 pl-2 pr-6 py-2
+    rounded-3xl bg-white/5 transition-all duration-300
+  `}>
+  <nav class="flex opacity-80 items-center text-white">
+    <img class="rounded-full w-8 h-8" src="./favicon.svg" alt="cortesa photo" />
+    <a class="ml-2 px-2" href="#tech-stack">Tech stack</a>
+    <a class="px-2" href="#portfolio">Portfolio</a>
+    <a class="px-2" href="#lab">Lab</a>
+    <a class="px-2" href="#experience">Experience</a>
+    <a class="px-2" href="#contact">Contact</a>
+  </nav>
 </header>
+<button id="go-up-btn"
+  class={`
+    opacity-0 scale-0 
+    fixed 
+    bottom-6 left-3/4 
+    p-3 h-16 w-14 
+    flex items-center justify-center flex-col 
+    rounded-full border border-2 border-white-200
+    bg-white/20 border border-white/30 shadow-lg
+    text-white/60 hover:bg-white/30 
+    transition overflow-hidden
+    z-50
+  `}
+  onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30
+  5" id="chevron"
+    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+    class="w-6 h-12 mx-auto">
+    <polyline points="18 15 12 9 6 15" />
+    <polyline points="18 30 12 24 6 30" />
+  </svg>
+</button>
+<style>
+
+@keyframes bounceUp {
+  0%, 100% {
+    transform: translateY(-3px) scale(1.5);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.6);
+  }
+}
+
+#go-up-btn #chevron {
+  transform: translateY(-3px) scale(1.5) ;
+}
+#go-up-btn:hover #chevron {
+  animation: bounceUp 2s ease-in-out infinite;
+}
+
+#main-header nav a:hover {
+  anchor-name: --a;
+}
+
+#main-header nav {
+  position: relative
+}
+
+#main-header nav:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: anchor(--a left);
+  width: anchor-size(--a width);
+  height: 100%;
+  background: white;
+  opacity: .2;
+  border-radius: 8px;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+
+}
+
+</style>
+<script is:inline>
+  const header = document.getElementById('main-header');
+  const goUpBtn = document.getElementById('go-up-btn');
+  const chevron = document.getElementById('chevron');
+
+  const observer = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      goUpBtn.classList.add('opacity-0');
+      goUpBtn.classList.add('scale-0');
+      // chevron.classList.remove('show-go-up');
+    } else {
+      goUpBtn.classList.remove('opacity-0');
+      goUpBtn.classList.remove('scale-0');
+      // chevron.classList.add('show-go-up');
+    }
+  }, { threshold: 0 });
+
+  observer.observe(header);
+</script>
