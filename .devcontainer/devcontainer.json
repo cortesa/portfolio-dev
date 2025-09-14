@@ -22,11 +22,20 @@
 					"source.fixAll.eslint": "always"
 				},
 				"eslint.validate": [
-					"javascript", 
-					"typescriptreact", 
-					"typescript", 
-					"react"
+					"javascript",
+					"javascriptreact",
+					"typescript",
+					"typescriptreact",
+					"astro"
 			  ],
+			  "eslint.probe": [
+					"javascript",
+					"javascriptreact",
+					"typescript",
+					"typescriptreact",
+					"astro"
+			  ],
+			  "eslint.useFlatConfig": true,
 			  "editor.tabSize": 2,
  				"editor.insertSpaces": false,
 				"editor.formatOnSave": true,

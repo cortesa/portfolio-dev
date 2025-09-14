@@ -1,4 +1,4 @@
-import type { TECHS } from '../const/techs'
+import type { TECHS } from "../const/techs"
 
 type TechStackItem = {
   name: keyof typeof TECHS
@@ -6,18 +6,18 @@ type TechStackItem = {
 }
 
 export const TECH_STACK: TechStackItem[] = [
-  { name: 'REACT', score: 5 },
-  { name: 'TYPESCRIPT', score: 5 },
-  { name: 'JOTAI', score: 4 },
-  { name: 'CSS', score: 5 },
-  { name: 'HTML', score: 4 },
-  { name: 'NODE', score: 3 },
-  { name: 'EXPRESS', score: 3 },
-  { name: 'GIT', score: 5 },
-  { name: 'GITHUB', score: 5 },
-  { name: 'BLOCKCHAIN', score: 4 },
-  { name: 'ASTRO', score: 2 },
-  { name: 'TAILWIND', score: 3 },
+  { name: "REACT", score: 5 },
+  { name: "TYPESCRIPT", score: 5 },
+  { name: "JOTAI", score: 4 },
+  { name: "CSS", score: 5 },
+  { name: "HTML", score: 4 },
+  { name: "NODE", score: 3 },
+  { name: "EXPRESS", score: 3 },
+  { name: "GIT", score: 5 },
+  { name: "GITHUB", score: 5 },
+  { name: "BLOCKCHAIN", score: 4 },
+  { name: "ASTRO", score: 2 },
+  { name: "TAILWIND", score: 3 },
   // ─── Auto-evaluated from experience ────────────────────────────────
   // { name: 'STYLED_COMPONENTS', score: 5 },
   // { name: 'AXIOS', score: 5 },

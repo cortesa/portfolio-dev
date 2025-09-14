@@ -1,17 +1,15 @@
 ---
-import { TECHS } from '../const/techs';
-import { TECH_STACK } from '../contents/techStack';
-import StackIcon  from '../icons/Stack.astro';
-import TechPill from './TechPill.astro';
-
-
+import { TECHS } from '../const/techs'
+import { TECH_STACK } from '../contents/techStack'
+import StackIcon  from '../icons/Stack.astro'
+import TechPill from './TechPill.astro'
 
 ---
 <h2 class="text-2xl semi-bold mb-6 flex gap-x-3 items-center">
-			<StackIcon class="size-8" aria-hidden="true"/>
-			Tech stack
-		</h2>
-		<div class="flex flex-row flex-wrap gap-4">
+      <StackIcon class="size-8" aria-hidden="true"/>
+      Tech stack
+    </h2>
+    <div class="flex flex-row flex-wrap gap-4">
       {TECH_STACK.map(tech => (
         <TechPill tech={TECHS[tech.name]}/>
       ))}

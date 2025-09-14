@@ -1,54 +1,49 @@
 ---
-import CortesaHero from '../components/CortesaHero.astro';
-import Experience from '../components/Experience.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import TechStack from '../components/TechStack.astro';
-import Layout from '../layouts/Layout.astro';
-import ContactMe from '../components/Contact.astro';
-import ChatIcon from '../icons/Chat.astro';
-import Footer from '../components/Footer.astro';
-import Lab from '../components/Lab.astro';
-import Portfolio from '../components/Portfolio.astro';
+import CortesaHero from '../components/CortesaHero.astro'
+import Experience from '../components/Experience.astro'
+import SectionContainer from '../components/SectionContainer.astro'
+import TechStack from '../components/TechStack.astro'
+import Layout from '../layouts/Layout.astro'
+import ContactMe from '../components/Contact.astro'
+import ChatIcon from '../icons/Chat.astro'
+import Footer from '../components/Footer.astro'
+import Lab from '../components/Lab.astro'
+import Portfolio from '../components/Portfolio.astro'
 ---
 
 <Layout
 title="About Cortesa - React Web Developer and Programmer with 8 Years of Experience"
 description="Meet Cortesa, a React web developer with 8 years of experience. Specializing in modern web design, dynamic applications, and tailored solutions that blend creativity and technology. Focused on intuitive interfaces, clean code, and optimized performance to elevate your digital presence. Check out featured projects and get in touch for collaborations!">
-	<main class="px-4 sm:px-20">
-		<SectionContainer id="hero" class="mt-20 lg:mt-36 mb-16">
-			<CortesaHero/>
-		</SectionContainer>
-	<SectionContainer id="tech-stack" class="mb-16" >
-		<TechStack/>
-	</SectionContainer>
-	<SectionContainer id="portfolio" class="mb-16">
-		<Portfolio/>
-	</SectionContainer>
-	<SectionContainer id="lab" class="mb-16">
-		<Lab/>
-	</SectionContainer>
-	<SectionContainer id="experience" class="mb-16">
-		<Experience/>
-	</SectionContainer>
-	<!-- <SectionContainer id="projects" >
-		<h2 class="text-2xl semi-bold mb-6 flex gap-x-3 items-center">
-			<CodeIcon class="size-8"/>
-			Projects
-			</h2>
-			</SectionContainer> -->
-			<SectionContainer id="contact" class="mb-16">
-				<h2 class="text-2xl semi-bold mb-6 flex gap-x-3 items-center">
-			<ChatIcon class="size-8" aria-hidden="true"/>
-			Let's talk?
-			</h2>
-				<ContactMe/>
-			</SectionContainer>
-			<Footer />
-	</main>
+  <main class="px-4 sm:px-20">
+    <SectionContainer id="hero" class="mt-20 lg:mt-36 mb-16">
+      <CortesaHero/>
+    </SectionContainer>
+  <SectionContainer id="tech-stack" class="mb-16" >
+    <TechStack/>
+  </SectionContainer>
+  <SectionContainer id="portfolio" class="mb-16">
+    <Portfolio/>
+  </SectionContainer>
+  <SectionContainer id="lab" class="mb-16">
+    <Lab/>
+  </SectionContainer>
+  <SectionContainer id="experience" class="mb-16">
+    <Experience/>
+  </SectionContainer>
+  <!-- <SectionContainer id="projects" >
+    <h2 class="text-2xl semi-bold mb-6 flex gap-x-3 items-center">
+      <CodeIcon class="size-8"/>
+      Projects
+      </h2>
+      </SectionContainer> -->
+      <SectionContainer id="contact" class="mb-16">
+        <h2 class="text-2xl semi-bold mb-6 flex gap-x-3 items-center">
+      <ChatIcon class="size-8" aria-hidden="true"/>
+      Let's talk?
+      </h2>
+        <ContactMe/>
+      </SectionContainer>
+      <Footer />
+  </main>
 </Layout>
-
-
-
-
-
 
