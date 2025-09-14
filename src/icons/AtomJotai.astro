@@ -1,1 +1,4 @@
-<img src="./images/logos/jotai.png" {...Astro.props} />
+---
+const { alt = 'Jotai logo', width = 24, height = 24, ...rest } = Astro.props
+---
+<img src="/images/logos/jotai.png" alt={alt} width={width} height={height} {...rest} />

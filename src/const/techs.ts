@@ -3,6 +3,7 @@ import ReactIcon from '../icons/React.astro'
 import TypescriptIcon from '../icons/Typescript.astro'
 import AtomJotaiIcon from '../icons/AtomJotai.astro'
 import CssIcon from '../icons/Css.astro'
+import ScssIcon from '../icons/Scss.astro'
 import HtmlIcon from '../icons/Html.astro'
 import NodeIcon from '../icons/Node.astro'
 import ExpressIcon from '../icons/Express.astro'
@@ -11,12 +12,14 @@ import GithubIcon from '../icons/Github.astro'
 import ChainIcon from '../icons/Chain.astro'
 import TailwindcssIcon from '../icons/Tailwindcss.astro'
 import AstroIcon from '../icons/Astro.astro'
+import ViteIcon from '../icons/Vite.astro'
 import NextIcon from '../icons/Next.astro'
 import DndKitIcon from '../icons/DndKit.astro'
 import ReactQueryIcon from '../icons/ReactQuery.astro'
 import ZustandIcon from '../icons/Zustand.astro'
 import Lit from '../icons/Lit.astro'
 import SocketIo from '../icons/SocketIo.astro'
+import StackIcon from '../icons/Stack.astro'
 
 export type Tech = {
   name: string
@@ -45,6 +48,11 @@ export const TECHS = {
     color: '#639',
     icon: CssIcon,
   },
+  SCSS: {
+    name: 'SCSS',
+    color: '#CC6699',
+    icon: ScssIcon,
+  },
   HTML: {
     name: 'HTML',
     color: '#e34f26',
@@ -54,6 +62,11 @@ export const TECHS = {
     name: 'Node.js',
     color: '#41873F',
     icon: NodeIcon,
+  },
+  SSR: {
+    name: 'SSR',
+    color: '#6b7280',
+    icon: StackIcon,
   },
   EXPRESS: {
     name: 'Express',
@@ -84,6 +97,11 @@ export const TECHS = {
     name: 'Astro',
     color: '#FF5D01',
     icon: AstroIcon,
+  },
+  VITE: {
+    name: 'Vite',
+    color: '#646CFF',
+    icon: ViteIcon,
   },
   NEXT: {
     name: 'Next.js',

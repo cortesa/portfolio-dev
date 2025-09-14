@@ -1,4 +1,8 @@
-<svg {...Astro.props} width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+---
+const { width = 24, height = 24, 'aria-label': ariaLabel = 'Next.js logo', title = ariaLabel, ...rest } = Astro.props
+---
+<svg role="img" aria-label={ariaLabel} width={width} height={height} {...rest} viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" fill="none">
+<title>{title}</title>
 <mask id="mask0_408_139" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="180" height="180">
 <circle cx="90" cy="90" r="90" fill="black"/>
 </mask>

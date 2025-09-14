@@ -12,7 +12,8 @@
 			"extensions": [
 				"dbaeumer.vscode-eslint",
 				"waderyan.gitblame",
-				"astro-build.astro-vscode"
+				"astro-build.astro-vscode",
+				"openai.chatgpt"
 			],
 			"settings": {
 				"workbench.editor.tabCloseButton": "left",
