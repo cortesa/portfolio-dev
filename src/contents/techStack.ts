@@ -6,6 +6,7 @@ type TechStackItem = {
 }
 
 export const TECH_STACK: TechStackItem[] = [
+  { name: "VITE", score: 5 },
   { name: "REACT", score: 5 },
   { name: "TYPESCRIPT", score: 5 },
   { name: "JOTAI", score: 4 },
@@ -18,6 +19,7 @@ export const TECH_STACK: TechStackItem[] = [
   { name: "BLOCKCHAIN", score: 4 },
   { name: "ASTRO", score: 2 },
   { name: "TAILWIND", score: 3 },
+  { name: "SCSS", score: 3 },
   // ─── Auto-evaluated from experience ────────────────────────────────
   // { name: 'STYLED_COMPONENTS', score: 5 },
   // { name: 'AXIOS', score: 5 },
