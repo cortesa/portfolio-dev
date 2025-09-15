@@ -77,18 +77,17 @@
 
 </style>
 <script is:inline>
-  const header = document.getElementById('main-header');
-  const goUpBtn = document.getElementById('go-up-btn');
-  const chevron = document.getElementById('chevron');
+  const header = document.getElementById("main-header");
+  const goUpBtn = document.getElementById("go-up-btn");
 
-  const observer = new IntersectionObserver(([entry]) => {
+  const observer = new IntersectionObserver(([ entry ]) => {
     if (entry.isIntersecting) {
-      goUpBtn.classList.add('opacity-0');
-      goUpBtn.classList.add('scale-0');
+      goUpBtn.classList.add("opacity-0");
+      goUpBtn.classList.add("scale-0");
       // chevron.classList.remove('show-go-up');
     } else {
-      goUpBtn.classList.remove('opacity-0');
-      goUpBtn.classList.remove('scale-0');
+      goUpBtn.classList.remove("opacity-0");
+      goUpBtn.classList.remove("scale-0");
       // chevron.classList.add('show-go-up');
     }
   }, { threshold: 0 });
