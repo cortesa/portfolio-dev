@@ -9,6 +9,29 @@
   height: 314px;
 }
 
+.inactiveContainer {
+  cursor: default;
+}
+
+.inactiveContent::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid color-mix(in srgb, var(--shadow-color) 85%, transparent);
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.content.expanded.inactiveContent {
+  animation: none;
+}
+
+.content.expanded.inactiveContent::after {
+  opacity: 1;
+}
+
 .content {
   position: absolute;
   display: flex;

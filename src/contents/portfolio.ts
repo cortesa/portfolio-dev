@@ -5,7 +5,7 @@ export type PortfolioProject = {
   companyName: string
   image: string
   color: string
-  url: string
+  url?: string
   description: string
   techs: (keyof typeof TECHS)[]
   status?: "in-progress" | "completed" | "archived"
@@ -17,7 +17,7 @@ export const PORTFOLIO: PortfolioProject[] = [
     companyName:"Yolorekt",
     image: "/images/projectCovers/Yolorekt.png",
     color: "#f97316",
-    url: "https://yolorekt.com",
+    status: "archived",
     description:
       "I have developed YOLOrekt’s real-time prediction platform UI with React, TypeScript, Jotai, and Socket.io, ensuring responsive and tested interfaces. Deployed via AWS Amplify in collaboration with designers and cross-functional teams.",
     techs: [ "REACT", "SOCKET_IO", "JOTAI" ],

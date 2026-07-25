@@ -1,6 +1,7 @@
 import AstroIcon from "../icons/Astro.astro"
 import AtomJotaiIcon from "../icons/AtomJotai.astro"
 import ChainIcon from "../icons/Chain.astro"
+import ClaudeIcon from "../icons/Claude.astro"
 import CssIcon from "../icons/Css.astro"
 import DndKitIcon from "../icons/DndKit.astro"
 import ExpressIcon from "../icons/Express.astro"
@@ -13,6 +14,7 @@ import NodeIcon from "../icons/Node.astro"
 import ReactIcon from "../icons/React.astro"
 import ReactQueryIcon from "../icons/ReactQuery.astro"
 import ScssIcon from "../icons/Scss.astro"
+import SanityIcon from "../icons/Sanity.astro"
 import SocketIo from "../icons/SocketIo.astro"
 import StackIcon from "../icons/Stack.astro"
 import TailwindcssIcon from "../icons/Tailwindcss.astro"
@@ -38,6 +40,16 @@ export const TECHS = {
     name: "Typescript",
     color: "#3178C6",
     icon: TypescriptIcon,
+  },
+  SANITY: {
+    name: "Sanity",
+    color: "#F03E2F",
+    icon: SanityIcon,
+  },
+  CLAUDE: {
+    name: "Claude",
+    color: "#C96442",
+    icon: ClaudeIcon,
   },
   JOTAI: {
     name: "Jotai",
