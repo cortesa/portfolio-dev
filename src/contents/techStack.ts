@@ -9,6 +9,8 @@ export const TECH_STACK: TechStackItem[] = [
   { name: "VITE", score: 5 },
   { name: "REACT", score: 5 },
   { name: "TYPESCRIPT", score: 5 },
+  { name: "SANITY", score: 4 },
+  { name: "CLAUDE", score: 4 },
   { name: "JOTAI", score: 4 },
   { name: "CSS", score: 5 },
   { name: "HTML", score: 4 },

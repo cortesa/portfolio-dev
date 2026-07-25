@@ -17,19 +17,11 @@ export function PortfolioCardIsland ({ project, children }: PortfolioProps) {
   const handleMouseEnter = useCallback(() => setExpand(true), []);
   const handleMouseLeave = useCallback(() => setExpand(false), []);
 
-  return (
-    <a 
-      href={project.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={style.container}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      aria-label={`View ${project.name} project from ${project.companyName}`}
-      role="article">
+  const cardContent = (
       <div 
         className={clsx(
           style.content,
+          !project.url && style.inactiveContent,
           expand && style.expanded
         )}
         style={{
@@ -125,6 +117,32 @@ export function PortfolioCardIsland ({ project, children }: PortfolioProps) {
           </div>
         )}
       </div>
+  )
+
+  if (!project.url) {
+    return (
+      <article
+        className={clsx(style.container, style.inactiveContainer)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        aria-label={`${project.name} project from ${project.companyName}`}
+      >
+        {cardContent}
+      </article>
+    )
+  }
+
+  return (
+    <a
+      href={project.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={style.container}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      aria-label={`View ${project.name} project from ${project.companyName}`}
+    >
+      {cardContent}
     </a>
   )
 }

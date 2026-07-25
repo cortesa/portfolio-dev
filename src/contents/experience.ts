@@ -4,13 +4,31 @@ type ExperienceItem = {
   description: string
   bullets?: string[]
   link?: string
+  linkLabel?: string
 }
 
 export const EXPERIENCE: ExperienceItem[] = [
   {
+    date: "Oct 2025 - Present",
+    title: "Frontend Developer at Valsea",
+    description: "As a Frontend Developer at Valsea, I work on maintaining and evolving the main application, combining product development, bug fixing, CMS integrations, and automation-focused tooling.",
+    link: "https://valsea.com/",
+    linkLabel: "About Valsea",
+    bullets: [
+      "Maintained and improved the frontend using React and TypeScript.",
+      "Implemented new features and UI improvements across the main application.",
+      "Worked with Sanity CMS and proxy-based integrations to support dynamic content and application workflows.",
+      "Designed skills and automation protocols using agentic programming practices.",
+      "Created internal tools to make the main application easier to control, develop, and maintain.",
+      "Collaborated closely with the team to diagnose bugs, deliver fixes, and improve the overall development process."
+    ]
+  },
+  {
     date: "Feb 2025 - Jul 2025",
     title: "Frontend Developer & web3 at NumberGroup",
     description: "As a Frontend Developer at NumberGroup, I´ve been collaborating to add new features and port to v2.",
+    link: "https://numbergroup.xyz/",
+    linkLabel: "About NumberGroup",
     bullets: [
       "Developed and maintained UI using React.js (v18), TypeScript (v5.3.2), and Styled-Components (v6.1.1).",
       "Implemented state management using Zustand (v4.5.2).",
